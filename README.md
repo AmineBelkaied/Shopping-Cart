@@ -2,13 +2,9 @@
 
 This is a shopping cart application developed in Java using the Spring Boot framework. It implements a REST API that allows users to manage products, categories, customers, and orders (packets) while maintaining stock updates, order validation, and cancellation rules.
 
-[Table of Contents]()
-
 [Project Overview]()
 
 [Technologies Used]()
-
-[Features]()
 
 [Project Structure]()
 
@@ -16,9 +12,7 @@ This is a shopping cart application developed in Java using the Spring Boot fram
 
 [API Endpoints]()
 
-[Running the Application]()
-
-[Running Tests]()
+[Testing the Shopping Cart Application]()
 
 ## Project Overview
 The shopping cart system supports basic e-commerce functionality, including viewing products, adding them to a shopping cart, validating and canceling orders, and tracking order statuses. Each order (or packet) can be confirmed, canceled within a specified time, and updated to reflect stock changes.
@@ -42,7 +36,7 @@ Temporary Stock: Used to hold product units during the pre-confirmation phase (w
 
 Represents an order placed by the customer. It contains a list of products added to the cart and the quantity of each product. Each packet has a status (e.g., IN_PROGRESS, CONFIRMED, CANCELED) that indicates its lifecycle state.
 
-### Technologies Used
+## Technologies Used
 
 Java (JDK 21)
 Spring Boot (3.3.5)
@@ -50,7 +44,7 @@ Spring Data JPA for database interaction
 JUnit 6 and Mockito for unit testing
 Maven for project build and dependency management
 
-### Project Structure
+## Project Structure
 
 **entities:** Defines core entities, including Product, Category, Packet, and PacketItem.
 
@@ -75,15 +69,13 @@ Database: This project can be configured to use an in-memory H2 database or an e
 1. Clone the repository:
 
 
-`git clone https://github.com/yourusername/shopping-cart-application.git`
+`git clone https://github.com/AmineBelkaied/Shopping-Cart.git`
 
-`cd shopping-cart-application`
+`cd shopping-cart`
 
 2. Configure the database :
 
-* By default, the project is configured to use an H2 in-memory database.
-
-* For a persistent database, update src/main/resources/application.yml with your database configuration.
+* For a persistent database, update src/main/resources/application.properties with your database configuration.
 
 ### Build the project
 
